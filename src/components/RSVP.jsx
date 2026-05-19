@@ -67,7 +67,7 @@ const RSVP = () => {
       data-aos="fade-up"
       data-aos-delay="500"
     >
-      <div className="max-w-xl mx-auto bg-dark-soft p-12 md:p-20 shadow-2xl border-t-4 border-gold">
+      <div className="max-w-xl mx-auto bg-dark-soft  py-12 px-8 md:p-20 shadow-2xl border-t-4 border-gold">
 
         {!success ? (
           <>
@@ -100,7 +100,7 @@ const RSVP = () => {
                 ¿Nos acompañas?
               </label>
 
-              <div className="flex gap-10 flex-col sm:flex-row">
+              <div className="flex gap-10 flex-col md:flex-row">
                 <label className="flex items-center cursor-pointer text-sm font-light italic">
                   <input
                     type="radio"
@@ -152,7 +152,7 @@ const RSVP = () => {
             <button
               type="submit"
               disabled={loading}
-              className="w-full btn-custom py-5 tracking-[0.5em] text-[10px] font-bold uppercase shadow-lg"
+              className="w-full btn-custom py-5 tracking-[0.5em] text-[8px] md:text-[10px] font-bold uppercase shadow-lg"
             >
               {loading ? "Enviando..." : "Enviar mi Confirmación"}
             </button>
