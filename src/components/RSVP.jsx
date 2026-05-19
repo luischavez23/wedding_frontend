@@ -29,7 +29,7 @@ const RSVP = () => {
 
     try {
       const response = await fetch(
-        "http://localhost:8000/api/send-rsvp/",
+        `${import.meta.env.VITE_API_URL}/api/send-rsvp/`,
         {
           method: "POST",
           headers: {
