@@ -10,6 +10,7 @@ const RSVP = () => {
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState("");
+  const [lastAttend, setLastAttend] = useState(""); // 👈 NUEVO
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -43,6 +44,8 @@ const RSVP = () => {
 
       if (response.ok) {
         setSuccess(true);
+
+        setLastAttend(formData.attend); // 👈 guardar si fue "si" o "no"
 
         setFormData({
           name: "",
@@ -92,14 +95,12 @@ const RSVP = () => {
                   className="w-full bg-transparent py-3 focus:outline-none placeholder:text-white/20 font-light italic border-b border-white/10 text-white"
                   required
                   onInvalid={(e) =>
-                    e.target.setCustomValidity(
-                      "Please type your name."
-                    )
+                    e.target.setCustomValidity("Please type your name.")
                   }
                   onInput={(e) => e.target.setCustomValidity("")}
                 />
               </div>
-              
+
               {/* Asistencia */}
               <div className="space-y-4">
                 <label className="block text-[10px] uppercase tracking-[0.2em] font-bold text-gold">
@@ -145,13 +146,7 @@ const RSVP = () => {
                   rows="4"
                   value={formData.message}
                   onChange={handleChange}
-                  className="w-full bg-transparent py-3 px-3
-                  focus:outline-none
-                  placeholder:text-white/20
-                  font-light italic
-                  border border-white/10
-                  text-white
-                  resize-none"
+                  className="w-full bg-transparent py-3 px-3 focus:outline-none placeholder:text-white/20 font-light italic border border-white/10 text-white resize-none"
                 />
               </div>
 
@@ -166,9 +161,7 @@ const RSVP = () => {
 
               {/* Error */}
               {error && (
-                <p className="text-red-400 text-center">
-                  {error}
-                </p>
+                <p className="text-red-400 text-center">{error}</p>
               )}
             </form>
           </>
@@ -179,12 +172,15 @@ const RSVP = () => {
             </h3>
 
             <p className="text-white/80 italic leading-relaxed mb-6">
-              Nos llena de alegría compartir este momento contigo.
+              {lastAttend === "no"
+                ? "Gracias por confirmar tu respuesta."
+                : "Nos llena de alegría compartir este momento contigo."}
             </p>
 
             <p className="text-white/70 italic leading-relaxed mb-8">
-              Tu presencia será parte de uno de los días más importantes de
-              nuestra vida.
+              {lastAttend === "no"
+                ? "Lamentamos que no nos puedas acompañar, pero agradecemos mucho tu confirmación."
+                : "Tu presencia será parte de uno de los días más importantes de nuestra vida."}
             </p>
 
             <div className="w-20 h-px bg-gold mx-auto mb-6"></div>
