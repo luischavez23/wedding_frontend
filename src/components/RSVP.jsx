@@ -91,6 +91,7 @@ const RSVP = () => {
                 value={formData.name}
                 onChange={handleChange}
                 className="w-full bg-transparent py-3 focus:outline-none placeholder:text-white/20 font-light italic border-b border-white/10 text-white"
+                required
               />
             </div>
 
@@ -109,6 +110,7 @@ const RSVP = () => {
                     checked={formData.attend === "si"}
                     onChange={handleChange}
                     className="mr-3 accent-gold"
+                    required
                   />
                   Sí, acepto
                 </label>
