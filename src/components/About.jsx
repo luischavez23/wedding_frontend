@@ -1,5 +1,5 @@
-import eduardoImg from '../assets/img/lupita_y_eduardo_2.png';
-import lupitaImg from '../assets/img/lupita_y_eduardo_3.png';
+import lupitaImg from '../assets/img/lupita_y_eduardo_2.png';
+import eduardoImg from '../assets/img/lupita_y_eduardo_3.png';
 
 const About = () => {
   return (
