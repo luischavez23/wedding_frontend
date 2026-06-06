@@ -1,38 +1,60 @@
+import lupitaEduardo1 from "../assets/img/lupita_y_eduardo_5.png";
+import lupitaEduardo2 from "../assets/img/lupita_y_eduardo_6.png";
+import lupitaEduardo3 from "../assets/img/lupita_y_eduardo_7.png";
+import lupitaEduardo4 from "../assets/img/lupita_y_eduardo_8.png";
+import lupitaEduardo5 from "../assets/img/lupita_y_eduardo_9.png";
+import lupitaEduardo6 from "../assets/img/lupita_y_eduardo_10.png";
+import lupitaEduardo7 from "../assets/img/lupita_y_eduardo_11.png";
+import lupitaEduardo8 from "../assets/img/lupita_y_eduardo_4.png";
+
+
 const galleryImages = [
   {
     id: 1,
-    src: "https://images.unsplash.com/photo-1522673607200-164d1b6ce486?auto=format&fit=crop&q=80&w=800",
+    src: lupitaEduardo1,    
     alt: "Galería 1",
     rotate: "rotate-[-2deg]",
   },
   {
     id: 2,
-    src: "https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?auto=format&fit=crop&q=80&w=800",
+    src: lupitaEduardo2,
     alt: "Galería 2",
     rotate: "rotate-[2deg]",
   },
   {
     id: 3,
-    src: "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&q=80&w=800",
+    src: lupitaEduardo3,
     alt: "Galería 3",
     rotate: "rotate-[-1deg]",
   },
   {
     id: 4,
-    src: "https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&q=80&w=800",
+    src: lupitaEduardo4,
     alt: "Galería 4",
     rotate: "rotate-[1deg]",
   },
   {
     id: 5,
-    src: "https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?auto=format&fit=crop&q=80&w=800",
+    src: lupitaEduardo5,
     alt: "Galería 5",
     rotate: "rotate-[-2deg]",
   },
   {
     id: 6,
-    src: "https://images.unsplash.com/photo-1507504031003-b417219a0fde?auto=format&fit=crop&q=80&w=800",
+    src: lupitaEduardo6,
     alt: "Galería 6",
+    rotate: "rotate-[2deg]",
+  },
+  {
+    id: 7,
+    src: lupitaEduardo7,
+    alt: "Galería 7",
+    rotate: "rotate-[2deg]",
+  },
+  {
+    id: 8,
+    src: lupitaEduardo8,
+    alt: "Galería 8",
     rotate: "rotate-[2deg]",
   },
 ];
